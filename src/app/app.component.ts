@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-essentials';
+  title = 'angular-essentials'
+  rootName = 'Peter'
+  shoppingList = ['apples', 'pears', 'bananas']
+
+  addToArray (newItem) {
+    console.log('newItem', newItem);
+    this.shoppingList.push(newItem);
+    console.log('this.shoppingList', this.shoppingList);
+  }
+  onNameChanged (newName) {
+    this.rootName = newName
+  }
 }
